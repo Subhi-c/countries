@@ -2,9 +2,10 @@ import { useState } from "react";
 import Data from "../data.json";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-export default function Country() {
+export default function Country({ Darkbg, setDarkbg }) {
   const [dataCountry, setdataCountry] = useState([]);
   const [searchvalue, setsearchvalue] = useState("");
+  const region = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
   const navigate = useNavigate();
   useEffect(() => {
     setdataCountry(Data);
@@ -23,10 +24,17 @@ export default function Country() {
     );
     setdataCountry(filtered);
   }
+  function handleRegion(e) {
+    const value = e.target.value;
+    const filtered = Data.filter((item) =>
+      item.region.toLowerCase().includes(value.toLowerCase())
+    );
+    setdataCountry(filtered);
+  }
   return (
     <>
       <div className="Search">
-        <div>
+        <div className="searchInput">
           <input
             type="text"
             name="search"
@@ -35,7 +43,23 @@ export default function Country() {
             onChange={handleSearch}
           />
         </div>
-        <div></div>
+        <div>
+          <select
+            name="region"
+            id="region"
+            className="select"
+            onChange={handleRegion}
+          >
+            <option value="" selectedm>
+              Select a continent
+            </option>
+            {region.map((item, i) => (
+              <option key={i} value={item}>
+                {item}{" "}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div>
         {dataCountry.length == 0 ? (
