@@ -38,11 +38,14 @@
   border: 1px solid #ccc;
   box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5); /* Bottom shadow */
   cursor: pointer;
+  border-radius: 10px;
 }
 
 img {
   height: 100%;
   width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .d-flex {
   display: flex;
@@ -51,7 +54,7 @@ img {
   gap: 10px;
 }
 .name {
-  margin: 10px;
+  margin-bottom: 10px;
 }
 .h-1 {
   font-weight: 800;
@@ -71,6 +74,7 @@ img {
   padding: 40px;
 }
 .boxshadow {
+  border-radius: 0px !important;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .mt-20 {
@@ -81,4 +85,24 @@ button {
   padding: 5px 15px;
   margin: 5px;
   width: 100px;
+  cursor: pointer;
+}
+.img {
+  height: 150px;
+}
+.CountryDatas {
+  margin: 20px 0px 40px 0px;
+}
+.Search input {
+  padding: 10px;
+  width: 40%;
+  border: none;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+}
+.Search {
+  margin: 10px;
+}
+.Search input:focus {
+  outline: none;
 }
