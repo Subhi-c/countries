@@ -79,15 +79,15 @@ export default function Country({ Darkbg, setDarkbg }) {
                   <div className="d-flex name">
                     <p className="h-1">{country.name}</p>
                   </div>
-                  <div className="d-flex">
+                  <div className="d-flex-start p-15">
                     <p className="h-2">Population: </p>
                     <p>{country.population}</p>
                   </div>
-                  <div className="d-flex">
+                  <div className="d-flex-start p-15">
                     <p className="h-2">Region: </p>
                     <p>{country.region}</p>
                   </div>
-                  <div className="d-flex">
+                  <div className="d-flex-start p-15">
                     <p className="h-2">Capital: </p>
                     <p>{country.capital}</p>
                   </div>

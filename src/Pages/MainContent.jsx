@@ -9,7 +9,7 @@ function MainContent() {
         <div>
           <Navbar Darkbg={Darkbg} setDarkbg={setDarkbg} />
         </div>
-        <div className="main">
+        <div className="country">
           <Country Darkbg={Darkbg} setDarkbg={setDarkbg} />
         </div>
       </div>

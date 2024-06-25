@@ -12,6 +12,13 @@
 body {
   background-color: hsl(0, 0%, 98%);
   color: hsl(200, 15%, 8%);
+  height: 100vh;
+}
+#root {
+  height: 70%;
+}
+.App {
+  height: 100%;
 }
 .DarkBtn {
   background-color: transparent;
@@ -57,7 +64,7 @@ img {
   display: flex;
   flex-direction: row;
   padding-left: 20px;
-  gap: 10px;
+  justify-content: space-between;
 }
 .name {
   margin-bottom: 10px;
@@ -76,7 +83,7 @@ img {
   width: 100%;
   height: 100%;
 }
-.main {
+.country {
   padding: 0px 90px;
 }
 .boxshadow {
@@ -92,6 +99,10 @@ button {
   margin: 5px;
   width: 100px;
   cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
 }
 .img {
   height: 150px;
@@ -128,7 +139,52 @@ select {
 }
 select {
   border: none;
+  cursor: pointer;
 }
 select:focus {
   outline: none;
+}
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  margin: 0% 5%;
+}
+.btndiv {
+  margin: 20px 0px;
+}
+.Details {
+  padding: 30px;
+}
+.CountryName {
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+.bold {
+  font-weight: 800;
+}
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.p-20 {
+  padding: 60px 40px;
+}
+.border {
+  padding: 0px 15px;
+  border: 1px solid grey;
+}
+.p-bot-10px {
+  padding-bottom: 10px;
+}
+.d-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.p-15 {
+  padding-left: 20px;
 }
