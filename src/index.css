@@ -13,7 +13,7 @@ body {
   background-color: hsl(0, 0%, 98%);
   color: hsl(200, 15%, 8%);
   height: 100vh;
-  width: 90vw;
+  width: 100vw;
 }
 #root {
   height: 70%;
@@ -168,6 +168,7 @@ select:focus {
 .d-flex-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .p-20 {
