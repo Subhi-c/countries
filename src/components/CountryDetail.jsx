@@ -18,7 +18,7 @@ export default function CountryDetail() {
         <Navbar />
       </div>
       <div className="main">
-        <div>
+        <div className="contentDiv">
           <div className="btndiv">
             <button onClick={handleback}>Back</button>
           </div>
@@ -78,17 +78,18 @@ export default function CountryDetail() {
                   </div>
                 </div>
               </div>
-
-              <div className="d-flex-row p-20">
-                <p className="bold">Border Countries :</p>
-                <div className="d-flex-row">
-                  {country.borders.map((border, i) => (
-                    <p key={i} className="border">
-                      {border}
-                    </p>
-                  ))}
+              {country.borders && (
+                <div className="d-flex-row p-20">
+                  <p className="bold">Border Countries :</p>
+                  <div className="d-flex-row">
+                    {country.borders.map((border, i) => (
+                      <p key={i} className="border">
+                        {border}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
